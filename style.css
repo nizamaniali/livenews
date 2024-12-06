@@ -127,7 +127,7 @@ body {
   transition: 0.5s;
 }
 .top-item img {
-  height: 100vh;
+  /* height: 100vh; */
 }
 .article:not(.top-item):hover {
   transform: scale(1.05);
@@ -146,4 +146,41 @@ body {
   width: 25%;
   padding: 15px;
   flex: 1 1 calc(25% - 10px);
+}
+
+@media (max-width: 768px) {
+  .articles-container {
+    gap: 15px;
+  }
+
+  .article {
+    flex: 1 1 calc(50% - 15px);
+  }
+
+  .top-item {
+    flex: 1 1 calc(50% - 15px);
+  }
+}
+
+/* small Screen (Mobile) */
+@media (max-width: 480px) {
+  .articles-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .article {
+    flex: 1 1 100%;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+
+  .top-item {
+    flex: 1 1 100%;
+  }
+
+  .moreArticles,
+  .extraArticles {
+    flex: 1 1 100%;
+  }
 }
